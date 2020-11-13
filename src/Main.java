@@ -158,6 +158,7 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=1;
 			t.setText("");
+			chcecks = true;
 		} 
 		
 		if(e.getSource()==bsub)
@@ -165,6 +166,7 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=2;
 			t.setText("");
+			chcecks = true;			
 		}
 		
 		if(e.getSource()==bmul)
@@ -172,6 +174,7 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=3;
 			t.setText("");
+			chcecks = true;
 		}
 		
 		if(e.getSource()==bdiv)
@@ -179,6 +182,7 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=4;
 			t.setText("");
+			chcecks = true;
 		}
 		
 		if(e.getSource()==beq)
