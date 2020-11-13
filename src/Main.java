@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -6,7 +5,7 @@ import javax.swing.*;
 public class Main extends JFrame implements ActionListener
 {
 	
-	static double a=0,b=0,result=0;
+	static double a=0,b=0;
 	static int operator=0;
 	boolean chcecks = false;
         
@@ -158,7 +157,6 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=1;
 			t.setText("");
-			chcecks = true;
 		} 
 		
 		if(e.getSource()==bsub)
@@ -166,7 +164,6 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=2;
 			t.setText("");
-			chcecks = true;			
 		}
 		
 		if(e.getSource()==bmul)
@@ -174,7 +171,6 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=3;
 			t.setText("");
-			chcecks = true;
 		}
 		
 		if(e.getSource()==bdiv)
@@ -182,7 +178,6 @@ public class Main extends JFrame implements ActionListener
 			a=Double.parseDouble(t.getText());
 			operator=4;
 			t.setText("");
-			chcecks = true;
 		}
 		
 		if(e.getSource()==beq)
@@ -191,22 +186,22 @@ public class Main extends JFrame implements ActionListener
 		
 			switch(operator)
 			{
-				case 1: result=a+b;
+				case 1: a=a+b;
 					break;
 		
-				case 2: result=a-b;
+				case 2: a=a-b;
 					break;
 		
-				case 3: result=a*b;
+				case 3: a=a*b;
 					break;
 		
-				case 4: result=a/b;
+				case 4: a=a/b;
 					break;
 		
-				default: result=0;
+				default: a=0;
 			}
 		
-			t.setText(""+result);
+			t.setText(""+a);
 		}
 		
 		if(e.getSource()==bclr)
