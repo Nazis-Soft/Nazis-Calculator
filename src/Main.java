@@ -1,8 +1,6 @@
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
  
 public class Main extends JFrame implements ActionListener
@@ -35,23 +33,6 @@ public class Main extends JFrame implements ActionListener
     static JButton bdel = new JButton("<-");
     public Main()
     {
-    
-    	try {
-            
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-    } 
-    catch (UnsupportedLookAndFeelException e) {
-       
-    }
-    catch (ClassNotFoundException e) {
-       
-    }
-    catch (InstantiationException e) {
-       
-    }
-    catch (IllegalAccessException e) {
-       
-    }
     	    setSize(250,375);
             setTitle("Kalkulator By Dawid Ploch");
             setVisible(true);
@@ -114,6 +95,25 @@ public class Main extends JFrame implements ActionListener
             bdec.setBounds(120, 70, 45, 45);
             bdec.addActionListener(this);
             add(bdec);
+
+
+        try {
+            
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            SwingUtilities.updateComponentTreeUI(this);
+        } 
+        catch (UnsupportedLookAndFeelException e) {
+       
+        }
+        catch (ClassNotFoundException e) {
+             
+        }
+        catch (InstantiationException e) {
+       
+        }
+        catch (IllegalAccessException e) {
+       
+        }
             setVisible(true);
         
     }
