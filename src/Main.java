@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -6,8 +7,10 @@ import javax.swing.*;
  
 public class Main extends JFrame implements ActionListener
 {
+	
 	static double a=0,b=0,result=0;
 	static int operator=0;
+	boolean chcecks = false;
         
 	private static final long serialVersionUID = 1L;    
 	static Main okienko;    
@@ -30,19 +33,30 @@ public class Main extends JFrame implements ActionListener
     static JButton bclr = new JButton("C");
     static JButton bdec = new JButton(".");
     static JButton bdel = new JButton("<-");
-    JLabel L1;
     public Main()
     {
-
+    
+    	try {
+            
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    } 
+    catch (UnsupportedLookAndFeelException e) {
+       
+    }
+    catch (ClassNotFoundException e) {
+       
+    }
+    catch (InstantiationException e) {
+       
+    }
+    catch (IllegalAccessException e) {
+       
+    }
     	    setSize(250,375);
             setTitle("Kalkulator By Dawid Ploch");
             setVisible(true);
             setResizable(false);
-            setLayout(null);
-            
-            setContentPane(new JLabel(new ImageIcon("TxT\\TxT1.png")));
-            L1 = new JLabel();
-            add(L1);
+            setLayout(null);            
             t.setEditable(false);
             t.setBounds(15, 10, 200, 50);
             add(t);
