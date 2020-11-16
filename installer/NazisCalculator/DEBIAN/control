@@ -1,0 +1,12 @@
+Package: nzcalc
+Version: 0.1.0
+Section: Accesories
+Priority: optional
+Architecture: all
+Installed-Size: 5800
+Homepage: https://nazissoft.github.io
+Depends: default-jre
+Maintainer: TheKozax (NazisSoft)
+Description: Nazis-Calculator
+ Calculator for NazisOS
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+chmod +x /usr/bin/Calc.jar
+chmod 775 /usr/bin/Calc.jar
+exit 0
